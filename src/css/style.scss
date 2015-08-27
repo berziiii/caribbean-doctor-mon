@@ -1,0 +1,712 @@
+//*************** Helper Classes ********************//
+
+@font-face {
+  font-family: "Aller-Display";
+  src: url("../fonts/Aller/AllerDisplay.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Glyphicons-Regular";
+  src: url("../fonts/Glyphicons/GLYPHICONS-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Glyphicons-Social";
+  src: url("../fonts/Glyphicons/GLYPHICONS-Social-Regular.woff") format("woff");
+}
+
+$white: #f1f1f1;
+
+$grey: #DADADA;
+
+$carbon: #383838;
+
+$dark-carbon: #2a2a2a;
+
+$orange: #D56826;
+
+$blue: #19A6B5;
+
+$light-blue: #75C9D2;
+
+$green: #21D1A6;
+
+$light-green: #4DDAB7;
+
+html, body, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16pt;
+  background-color: $dark-carbon;
+  padding-right: -10px;
+  padding-left: -10px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover, &:visited {
+    text-decoration: none;
+  }
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.glyphicons {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons-Regular";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: top;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.social {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons-Social";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: top;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glyphicons-pencil:before {
+  content: "\270F";
+}
+
+.glyphicons-embed-close:before {
+  content: "\E119";
+}
+
+.glyphicons-cogwheels:before {
+  content: "\E138";
+}
+
+.glyphicons-fire:before {
+  content: "\E023";
+}
+
+.glyphicons-up-arrow:before {
+  content: "\E214";
+}
+
+.glyphicons-left-arrow:before {
+  content: "\E211";
+}
+
+.glyphicons-home:before {
+  content: "\E021";
+}
+
+.glyphicons-right-arrow:before {
+  content: "\E212";
+}
+
+.glyphicons-chevron-left:before {
+  content: "\e225";
+}
+
+.glyphicons-chevron-right:before {
+  content: "\e224";
+}
+
+.glyphicons-menu-hamburger:before {
+    content: "\e517";
+}
+
+.social-facebook:before {
+  content: "\E031";
+}
+
+.social-linked-in:before {
+  content: "\E018";
+}
+
+.social-twitter:before {
+  content: "\E032";
+}
+
+.social-github:before {
+  content: "\E022";
+}
+
+.hide {
+  display: none;
+}
+
+.center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+h1 {
+  font-family: Aller-Display;
+  font-weight: 600;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h2 {
+  font-family: Aller-Bold;
+  font-weight: 600;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h3 {
+  font-family: Aller-regular;
+  font-weight: 600;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h4 {
+  font-family: Aller-Light;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h5 {
+  font-family: Aller-Bold;
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h6 {
+  font-family: Aller-Regular;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+
+//************* MODULE MEDIA QUIERIES *************//
+@media (max-width: 1024px) {
+  body {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 8pt;
+  }
+}
+
+//*************** Module Classes ********************//
+
+
+
+//******* MENU *********//
+
+
+
+
+.side-menu {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $carbon;
+  text-align: center;
+}
+
+.side-menu img {
+  margin: 30px 0px;
+  text-align: center;
+  color: $white;
+  width: 100px;
+  cursor: pointer;
+}
+
+.side-menu ul {
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid $dark-carbon;
+}
+
+.side-menu ul a {
+  cursor: pointer;
+  background-color: $carbon;
+  border-top: 2px solid $dark-carbon;
+  border-bottom: 2px solid $dark-carbon;
+  display: block;
+  padding: 20px;
+}
+
+.side-menu ul a:hover {
+  background-color: $dark-carbon;
+  border-right: 5px solid $green;
+}
+
+.side-menu li {
+  color: $white;
+  font-weight: 600;
+}
+
+.social-container {
+  margin-top: 75px;
+  font-size: 1.5em;
+  color: $white;
+}
+
+.social-container a {
+  color: $white;
+}
+
+.social-container a:hover {
+  color: $green;
+}
+
+.social-container span {
+  padding: 3px;
+}
+
+.nav-menu {
+  display: none;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(42, 42, 42, .8);
+  color: $white;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav-menu img {
+  width: 60px;
+  float: left;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+#nav-hamburger {
+  float: right;
+  padding: 8px 20px 0px 0px;
+  font-size: 3em;
+  color: $green;
+  cursor: pointer;
+}
+
+#close-responsive {
+  float: right;
+  padding: 0px 20px 0px 0px;
+  font-size: 5em;
+  font-weight: 600;
+  color: $green;
+  cursor: pointer;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#nav-hamburger:hover, #close-responsive:hover {
+  color: $green;
+}
+
+.nav-menu-container {
+  background-color: rgba(42, 42, 42, .95);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  text-align: center;
+  padding-top: 150px;
+  z-index: 1000;
+}
+
+.nav-content {
+  padding-top: 100px;
+  font-size: 2em;
+}
+
+.nav-menu-container-open {
+    display: inline-block;
+  }
+
+#nav-menu-container-close {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+
+
+//*************MENU MEDIA QUIERIES*****************//
+
+
+@media (max-width: 767px) {
+  .nav-menu {
+    display: inline-block;
+    boder-bottom: 0px solid $white;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  .nav-item {
+    cursor: pointer;
+    background-color: rgba(42, 42, 42, .0);
+    display: block;
+    padding: 20px;
+  }
+
+  .nav-item h6 {
+    color: $green;
+    font-size: 1.75em;
+  }
+
+  .social-container {
+    margin-top: 100px;
+    font-size: 3em;
+    color: $white;
+  }
+
+  .nav-content {
+    padding-top: 25px;
+    font-size: 1em;
+  }
+
+  .nav-menu-container {
+    padding-top: 50px;
+  }
+}
+
+
+//******* MAIN CONTENT *********//
+
+
+.main-container, page-container {
+  background-color: $grey;
+  width: 100%;
+  padding-left: 200px;
+  color: $carbon;
+  font-size: 1em;
+}
+
+.hero-title {
+  padding: 50px 0px;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  font-size: 1.15em;
+  padding-top: 20%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.hero-title h1 {
+  border: 5px solid $white;
+  width: 75%;
+  margin-left: 12.5%;
+  padding: 20px;
+}
+
+.hero-banner {
+  width: 100%;
+  border-bottom: $carbon;
+  background: url(../driftwood-1.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  height: 100vh;
+}
+
+.hero-content-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 0px 15px;
+}
+
+.hero-content {
+  padding: 75px 0px 100px 0px;
+}
+
+.hero-subtitle {
+  color: $light-green;
+  font-size: 1.75em;
+  padding: 0px;
+}
+
+.post-wrapper, .misc-wrapper {
+  background-color: $white;
+  text-align: center;
+  width: 100%;
+  margin-right: -15px;
+}
+
+.about-wrapper {
+  background-color: $grey;
+  text-align: center;
+  width: 100%;
+  margin-right: -15px;
+}
+
+.main-content {
+  color: $carbon;
+  font-size: .8em;
+}
+
+.main-content h2 {
+  padding-top: 40px;
+}
+
+.post-container, .about-container, .misc-container {
+  padding: 10px 15px;
+  font-weight: 600;
+  background-color: $grey;
+  border-radius: 20px;
+  border: 1px solid $dark-carbon;
+  margin: 25px 0px;
+}
+
+.about-container {
+  background-color: $white;
+}
+
+.about-wrapper, .post-wrapper, .misc-wrapper {
+  padding: 25px 0px;
+}
+
+ul .archive {
+  display: block;
+}
+
+.archive a {
+  cursor: pointer;
+  color: $dark-carbon;
+}
+
+.archive a:hover {
+  cursor: pointer;
+  color: $green;
+}
+
+button {
+  margin: 50px 0px;
+  background-color: $green;
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+input {
+  margin: 25px 0px;
+  width: 90%;
+}
+
+//*************MAIN MEDIA QUIERIES*****************//
+
+@media (max-width: 767px) {
+  .main-container {
+    padding-left: 0px;
+    font-size: 1.15em;
+  }
+
+  .hero-title {
+    padding-top: 35%;
+  }
+
+  .post-container h1, .about-container h1, .misc-container h1 {
+    font-size: 2em
+  }
+
+  .post-container, .about-container, .misc-container {
+    font-size: 1.25em
+  }
+}
+
+
+//*************** PAGE ***************************//
+
+
+
+.page-hero {
+  width: 100%;
+  border-bottom: $carbon;
+  background: url(../driftwood-1.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  height: 200px;
+}
+
+.page-banner {
+  width: 100%;
+  padding-left: 200px;
+  height: 200px;
+  color: $white;
+  text-align: center;
+  font-size: .8em;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.page-title {
+  padding: 50px 0px;
+  font-size: .8em;
+}
+
+.page-title h1 {
+  border: 5px solid $white;
+  width: 75%;
+  margin-left: 12.5%;
+  padding: 20px;
+}
+
+.page-content-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 0px 15px;
+}
+
+.page-content {
+  padding: 75px 0px 100px 0px;
+}
+
+.page-subtitle {
+  color: $light-green;
+  font-size: 1.75em;
+  padding: 0px;
+}
+
+.page-container a {
+  text-decoration: none;
+  color: $carbon;
+  cursor: pointer;
+}
+
+.page-container a:hover {
+  color: $green;
+  cursor: pointer;
+}
+
+
+.single-wrapper {
+  background-color: $white;
+  text-align: center;
+  width: 100%;
+  margin-right: -15px;
+  min-height: 100vh;
+  padding-left: 200px;
+}
+
+.single-wrapper span a {
+  text-decoration: underline;
+}
+
+.comment-wrapper, .recent-posts-wrapper {
+  background-color: $white;
+  text-align: center;
+  width: 100%;
+  margin-right: -15px;
+  padding-left: 200px;
+  padding-bottom: 50px;
+}
+
+.single-wrapper h1, .comment-wrapper h1, .recent-posts-wrapper h1 {
+  padding: 25px 0px;
+}
+
+.single-container, .comment-container, .recent-posts-container {
+  padding: 10px 15px;
+  font-weight: 600;
+  background-color: $grey;
+  border-radius: 20px;
+  border: 1px solid $dark-carbon;
+  margin: 25px 0px;
+}
+
+
+//***************PAGE MEDIA QUIERES*****************//
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding-left: 0px;
+  }
+
+  .page-title {
+    padding-top: 90px;
+  }
+
+  .single-wrapper, .comment-wrapper, .recent-posts-wrapper {
+    padding-left: 0px;
+    font-size: 2em;
+  }
+
+  .recent-posts-container {
+    font-size: .8em;
+  }
+}
+
+//********* FOOTER  *************//
+
+
+footer {
+  padding-left: 200px;
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid $green;
+  background-color: $carbon;
+  color: $white;
+  font-size: 1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+//*************FOOTER MEDIA QUIERIES*****************//
+
+@media (max-width: 767px) {
+  footer {
+    padding-left: 0px;
+    font-size: 1.25em;
+  }
+}
