@@ -66,6 +66,8 @@ module.exports = function (grunt) {
               'js/**',
               'css/**',
               'bootstrap/**',
+              'images/**',
+              'fonts/**',
             ],
             dest: 'dist'
           }

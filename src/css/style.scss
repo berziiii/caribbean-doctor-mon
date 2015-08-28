@@ -446,7 +446,7 @@ h6 {
 .hero-banner {
   width: 100%;
   border-bottom: $carbon;
-  background: url(../driftwood-1.png) no-repeat center center;
+  background: url(../images/driftwood-1.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -569,7 +569,7 @@ input {
 .page-hero {
   width: 100%;
   border-bottom: $carbon;
-  background: url(../driftwood-1.png) no-repeat center center;
+  background: url(../images/driftwood-1.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -700,6 +700,11 @@ footer {
   font-size: 1em;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.fixfixed {
+    position: absolute;
+    top: 0px;
 }
 
 //*************FOOTER MEDIA QUIERIES*****************//
